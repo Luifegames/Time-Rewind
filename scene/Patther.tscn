@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://background.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float des;
+
+void fragment(){
+	float t = des * TIME;
+	COLOR = texture(TEXTURE	,vec2(UV.x + t,UV.y + t));
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/des = -0.04
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sin título" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 1072.55, 550.368 )
+scale = Vector2( 0.291987, 0.291987 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8099.79, 4485.17 )

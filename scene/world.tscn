@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://model/Prince.tscn" type="PackedScene" id=1]
+
+[node name="World" type="Spatial"]
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.725829, 3.90406, -0.239757 )
+use_collision = true
+invert_faces = true
+width = 13.2348
+height = 7.71713
+depth = 12.3537
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542, 1.55553 )
+use_collision = true
+width = 6.66595
+height = 0.882527
+depth = 1.41998
+
+[node name="CSGBox3" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.900402, 0.435058, 0, -0.435058, 0.900402, 0, 0.352894, -0.123791 )
+use_collision = true
+width = 2.55577
+height = 0.303228
+depth = 2.26583
+
+[node name="Prince" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.199218, -2.74105 )
+
+[editable path="Prince"]
